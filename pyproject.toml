@@ -1,0 +1,15 @@
+[project]
+name = "lanchain-udemy"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "langchain>=1.2.10",
+    "langchain-anthropic>=1.3.4",
+    "langchain-google-genai>=4.2.1",
+    "langchain-ollama>=1.0.1",
+    "pip>=26.0.1",
+    "python-dotenv>=1.2.2",
+    "streamlit>=1.54.0",
+]
