@@ -1,4 +1,5 @@
 import streamlit as st
+
 # AIMessage, HumanMessage, SystemMessage = objetos de mensaje tipados de LangChain
 # Cada uno envuelve un rol (system/human/ai) + cadena de contenido
 from langchain_core.messages import AIMessage, HumanMessage, SystemMessage
@@ -6,6 +7,7 @@ from langchain_core.prompts import (
     HumanMessagePromptTemplate,
     SystemMessagePromptTemplate,
 )
+
 # ChatOllama se conecta a un servidor Ollama corriendo localmente
 from langchain_ollama import ChatOllama
 
@@ -14,7 +16,6 @@ st.set_page_config(page_title="Basic Chatbot", page_icon="🤖")
 st.title("🤖 Basic Chatbot with Langchain")
 st.markdown("Chat with a local LLM powered by LangChain and Ollama.")
 
-# temperature: 0 = deterministico, 1 = creativo
 chat_model = ChatOllama(model="gemma3:27b", temperature=0.3)
 
 # st.session_state persiste datos entre reruns de Streamlit (cada interaccion re-ejecuta el script)
